@@ -15,6 +15,7 @@
  * 02110-1301, USA.
  */
 
+#include "config.h"
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -32,10 +33,11 @@ void fillbuffer ( int * buffer, size_t numvals )
 void usage ( )
 {
     fprintf ( stderr,
-        "Usage: cpuspin seconds\n\n"
+        "Usage: %s seconds\n\n"
         "Will max out a single CPU for the specified number of seconds.\n"
         "Performs division and sqrt calculations over a non-repeated set\n"
-        "of random numbers.\n" );
+        "of random numbers.\n",
+        PACKAGE );
     exit ( 1 );
 }
 

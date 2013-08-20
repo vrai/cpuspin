@@ -8,3 +8,4 @@ libtool
 INSTALL
 Makefile
 Makefile.in
+*.swp
