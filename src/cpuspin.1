@@ -1,0 +1,31 @@
+.\"
+.\" TODO Header
+.\"
+.\" ===================================================================
+.\"
+.TH "cpuspin" 1 "2013 August 20"
+.SH "NAME"
+cpuspin \- loads a single CPU as heavily as possible for a limited time.
+.\"
+.\" ===================================================================
+.\"
+.SH "SYNOPSIS"
+.B cpuspin
+\fIseconds\fP
+.\"
+.\" ===================================================================
+.\"
+.SH "DESCRIPTION"
+The \fBcpuspin\fP tool is simply a tight loop with the occasional time
+check. Within this loop a division and \fBsqrt\fP operation is applied
+to a set of random numbers. In normal operation this will result in an
+(uncontended) CPU core maxing out for the duration of the run.
+.sp
+Note that exact timing of the run is not guaranteed. Overall machine
+load could result in the tool running for slightly longer than the
+specified number of seconds.
+.\"
+.\" ===================================================================
+.\"
+.SH "AUTHOR"
+Copyright \(co 2013, Vrai Stacey <vrai.stacey@gmail.com>
